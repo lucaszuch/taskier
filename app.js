@@ -49,8 +49,7 @@ function complete(todo) {
 
 // Handles filter
 function filterTodo (e) {
-  const todos = $('.todo-list').children();
-  todos.forEach(function(todo) {
+  $('.todo-list').children().each(function(i, todo) {
     switch(e.target.value) {
       case "all":
         todo.style.display = "flex";
